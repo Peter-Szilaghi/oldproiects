@@ -1,0 +1,146 @@
+
+.member {
+	color: white;
+	b1ackground-color: #785B24;
+	background-color: #785B24;
+	border-radius: 4px;
+	padding: 2px;
+}
+
+/*text color 1*/
+.d1 {
+	color: #785B24;
+	text-shadow: 1px 1px black;
+	
+}
+
+/*text color 2*/
+.d2 {
+	color: #402E32;
+	text-shadow: 1px 1px black;
+
+}
+
+/*text color 3*/
+.d3 {
+	color: #785B24;
+	background: #F2EFE7;
+	border-radius: 4px;
+	border:2px solid #402E32;
+}
+
+/*background color 1*/
+.jumbotron{
+	ba1ckground: radial-gradient(circle, #f2efe7 50%, #a98f5e 100%);
+	background: radial-gradient(circle,  #f2efe7 50%, #785B24 100%);
+}
+
+.bc1{
+	background: radial-gradient(circle,  #f2efe7 50%, #785B24 100%);
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+body {
+	b1ackground-color: #F2EFE7; 
+	f1ont-weight: bold;
+}
+
+
+/*background color 2*/
+.titlu{
+	color: white;
+	b1ackground-color: #785B24;
+	background-color: #402E32;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 9px;
+
+}
+
+/* border lateral*/
+.chenar{
+	b1order-right: dotted #a98f5e;
+	b1order-left: dotted #a98f5e;
+	b1order-bottom: dotted #a98f5e;
+	border-right: dotted #785B24;
+	border-left: dotted #785B24;
+	border-bottom: dotted #785B24;
+}
+
+/*call to action*/
+.cta{
+	/*background-color: #DBA11C;*/
+	color: white;
+	padding: 9px 20%;
+	border:2px solid black;
+	border-radius: 5px;
+	background: #785B24;
+}
+
+
+/* Icons */
+.bi-check2-circle{
+	color: green;
+	font-size: 24px;
+}
+
+.bi-x-square-fill{
+	color: #402E32;
+}
+
+.bi-check2-square{
+	color: #A23B13;
+}
+
+.bi-person-plus-fill{
+	c1olor: red;
+}
+
+.ascuns {
+	display: none;
+}
+
+/*textul apare in bottom-ul/josul div-ului*/
+.jos {
+	po1sition: absolute;
+	b1ottom: auto;
+	t1ext-align: center;
+	
+}
+
+
+hr{
+	margin: 25px;
+}
+
+/*Container Background*/
+.cont_back{
+	background: #F2EFE7;
+}
+
+
+/* Adresele de contact de pe margina*/
+.mcontact{
+	position: fixed;
+	right: 6px;
+	bottom: 100px;
+	z-index: 1000;
+	color: black;
+	display: inline-block;
+	width:55px;
+}
+
+.contact{
+	background-color: black;
+	color:white;
+	font-size:15px;
+	border-radius: 2px;
+}
+
+
+footer{
+	background-color: #785B24;
+	color: white;
+	border-radius: 5px;
+}
