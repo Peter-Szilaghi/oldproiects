@@ -1,0 +1,347 @@
+/* https://fontawesome.com/icons/ 
+Iconuri */
+
+* { box-sizing: border-box; }
+
+/*Centrare verticala*/
+.centru{
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: center;
+}
+/*Centrare verticala*/
+
+/*Chenar pt elemente */
+.chenar{
+	position: relative;
+	border-bottom: 2px solid black;
+	padding: 4px;
+	margin: 16px;
+	min-height: 250px;
+	width: calc(33% - 32px);
+	border-radius: 4px;
+	background: white;
+	transform: rotate(3deg);
+	transition: 0.3s;
+}
+.chenar:hover{ transform: translate(0px, -16px) rotate(0deg); }
+/*Chenar ce pot sa iti ofer */
+
+/*Pioneza*/
+.pinimg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.chenar:hover .pinimg, .about-me-text:hover .pinimg{
+	left: 50%;
+	transform: translate(-50%);
+}
+/*Pioneza*/
+
+/* Umbra pentru elemente din sectiuni*/
+.shadow-x{
+	box-shadow: 12px 12px 1px black;
+}
+/* Umbra pentru elemente din sectiuni*/
+
+/* Titluri si Subtitluri*/
+h2{
+	display: inline-block;
+	min-width: 50%;
+	padding: 24px 24px;
+	margin: 24px 0;
+	border-bottom: 2px solid black;
+	box-shadow: 8px 8px 1px black;
+	background: white;
+	border-radius: 8px;
+	transition: 0.3s;
+}
+	h2 + p {
+		padding: 8px 0;
+	}
+
+h2:hover {
+	transform: scale(1.1);
+}
+/* Titluri si Subtitluri*/
+
+
+/*Navbar*/
+nav {
+	background: #198754;
+	border-bottom: 2px solid black;
+}
+	nav img{ border-radius: 50%; box-shadow: 4px 4px 1px black;}
+	nav .navbar-brand{ background: inerhit; }
+	nav .nav-link{
+		border-radius: 4px;
+		margin: 8px;
+		padding: 12px;
+		background: #0d6efd;
+		color: white !important;
+		border-bottom: 2px solid black;
+		box-shadow: 4px 4px 1px black;
+		transition: 0.3s;
+	}
+	nav .nav-link:hover, nav img:hover { transform: scale(1.1); background: #38128D;}
+/*Navbar*/
+
+/*Jumbotron Header*/
+.jumbotron {
+	min-height: calc(100vh - 55px);
+	background: #198754;
+}
+	.jumbotron img{
+		border: 2px solid white;
+		border-radius: 50%;
+		transition: 0.3s;
+	}
+	.jumbotron h1 { transition: 0.3s; }
+	.jumbotron img:hover, .jumbotron h1:hover{ transform: scale(1.05); }
+	.jumbotron a{
+		display: inline-block;
+		width: 300px;
+		border-bottom: 2px solid black;
+		transition: 0.3s;
+	}
+	.jumbotron a:hover{ transform: scale(1.1); background: #38128D; border: none;}
+/*Jumbotron Header*/
+
+/*Sectiuni - Ocupa tot height-ul*/
+.sectiune{
+	min-height: calc(100vh - 55px);
+	padding-top: 10%;
+}
+/*Sectiuni - Ocupa tot height-ul*/
+
+/* sectiunile, culoare de top preia culoarea sectiunii anterioare*/
+/* #Ce primesti */
+#ce-primesti { background-image: linear-gradient(#198754 , #0d6efd 5%); }
+	#ce-primesti h2, #ce-primesti .chenar { color: #0d6efd; }
+	#ce-primesti i{ margin: 16px; }
+/* #Ce primesti */
+
+/* #Skillurile mele */
+#skills{ background-image: linear-gradient(#0d6efd ,#6610f2 5%); }
+	#skills h2, #skills .chenar { color: #6610f2; }
+	#skills i { margin: 16px; }
+	#skills p { margin: 0; padding: 2px 0;}
+	#skills li { list-style-type: none; padding: 0; }
+	#skills ul { padding: 0 0 16px 0; margin: 0; }
+/* #Skillurile mele */
+
+/* #Proiectele mele */
+#projects { background-image: linear-gradient(#6610f2 ,#38128D 5%); }
+	#projects h2, #projects .chenar { color: #38128D; }
+	#projects h5 { margin: 16px 0; }
+	#projects p { margin: 0; padding: 2px 0;}
+	#projects li { list-style-type: none; padding: 0;}
+	#projects ul { padding: 0 0 16px 0; margin: 0; }
+	#projects button { 
+		display: inline-block;
+		background: #0d6efd;
+		color: white;
+		margin-bottom: 16px;
+		border-bottom: 2px solid black;
+		box-shadow: 4px 4px 1px black; 
+	}
+	#projects button:hover { transform: scale(1.1); background: #38128D;}
+/* #Proiectele mele */
+
+/* #Despre mine */
+#about-me { background-image: linear-gradient(#38128D ,#198754 5%); }
+	#about-me h2, #about-me .chenar { color: #198754; }
+	#about-me .about-me-img {
+		margin: 16px;
+		width: calc(33% - 32px);
+		transform: rotate(45deg);
+		overflow: hidden;
+		transition: 0.8s;
+	}
+		.about-me-img img{
+			transform: rotate(-45deg);
+			width: 100%;
+			transition: 0.8s;
+		}
+		#about-me .about-me-img:hover{ transform: rotate(0deg);}
+		.about-me-img:hover img{ transform: rotate(0deg); }
+	#about-me .about-me-text {
+		border-bottom: 2px solid black;
+		padding: 48px;
+		margin: 16px;
+		text-align: left;
+		background: #0d6efd;	
+		width: calc(66% - 32px);
+		border-radius: 4px;
+		text-indent: 24px;
+		z-index: 1;
+		transform: rotate(3deg);
+		transition: 0.8s;
+	}
+	#about-me .about-me-text:hover{
+		transform: rotate(0deg);
+	}
+	.about-me-text #signature{
+	    position: relative;
+		display: block;
+        width: 120px;
+		margin: 0 0 0 auto;
+	}
+/* #Despre mine */
+
+/* #contact */
+#contact { background-image: linear-gradient(#198754 ,#0d6efd 5%); }
+	#contact h2, #contact .chenar { color: #0d6efd; }
+	#contact img{
+		width: 50px;
+		margin: 8px;
+	}
+	#contact .linkedin{
+		background: white;
+		border-radius: 8px;
+	}
+/* #contact */
+
+/*Maps and contacts*/
+address { background: lightgray; padding: 16px; color: #0d6efd; border-radius: 8px; font-weight: bold;}
+#contact h2 + .container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 4px 0;
+	flex-direction: row-reverse;
+}
+	.social-media {
+		display: flex;
+		width: calc(40% - 16px); 
+		margin: 8px;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+		.social-media a, #social-media a:visited{
+			text-decoration: none;
+			color: white;
+			border: 2px solid black;
+			border-radius: 8px;
+			width: 170px;
+			margin: 8px 0;
+			transition: 0.3s;
+		}
+		.social-media a:hover { transform: scale(1.1); }
+	.maps { width: calc(60% - 16px); margin: 8px; }
+		iframe { width: 100%; height: 300px; border: 2px solid; border-radius: 8px;}
+		.mapouter{ width:100%; }	
+/*Maps and contacts*/
+/* sectiunile, culoare de top preia culoarea sectiunii anterioare*/
+
+/* Footer */
+	footer { background: black; color: white; }
+/* Footer */
+
+@media only screen and (max-width: 960px) {
+	.social-media { width: 100%; flex-direction: row; justify-content: space-around;}
+		.social-media a { width: auto; display: flex; flex-direction: column; padding: 8px; }
+	.maps { width: 100%; } 
+}
+
+@media only screen and (max-width: 768px) {
+	.chenar{
+		width: calc(50% - 32px);
+		margin: 16px;
+	}
+	.jumbotron img, .about-me-img img{
+		width: 80%;
+		margin: 0 auto 48px;
+	}
+	#about-me .about-me-img, #about-me .about-me-text {
+		width: calc(100%);
+		margin: 8px auto;
+	}
+	.about-me-text #signature{
+        width: 100px;
+	}
+	.social-media { justify-content: flex-start; }
+			.social-media a {width: calc(33% - 8px); align-items: center; margin: 8px 4px; }
+			.social-media .shadow-x { box-shadow: 4px 4px 1px black; }
+}
+
+@media only screen and (max-width: 576px) {
+	.chenar{
+		width: calc(100%);
+		margin: 16px;
+	}
+	.jumbotron img, .about-me-img img{
+		width: 90%;
+		margin: 0 auto 48px;
+	}
+	#about-me .about-me-text { padding: 16px; margin: 16px;}
+}
+/*Chenar ce pot sa iti ofer */
+
+/* Top UP Button */
+#top-up{
+	display: inline-block;
+	position: fixed;
+	bottom: 4px;
+	right: 4px;
+	z-index: 99;
+	font-size: 24px;
+}
+
+.negru{
+	background: black;
+	color: white;
+}
+
+.alb {
+	background: white;
+	color: black;
+}
+/* Top UP Button */
+
+/* Mesaj care apare pana cand pagina se incarca(fiserele externe, DOM este deja incarcat) */
+.pre-incarcat{
+	position: fixed;
+	background-color: red;
+	text-align: center;
+	top: 76px;
+	padding: 0;
+	width: 100%;
+	height: 96px;
+	z-index: 999;
+}
+.pre-incarcat p{
+	color: white;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* Mesaj care apare pana cand pagina se incarca(fiserele externe, DOM este deja incarcat) */
+
+.bg-purple { color: #38128D; background: #38128D;}
+/* sectiunile, culoare de top preia culoarea sectiunii anterioare*/
+
+/*Culori bootstrap
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+$brown:   #BA1911;
+#38128D
+
+*/
+
+/* sectiunile, culoare de top preia culoarea sectiunii anterioare*/
