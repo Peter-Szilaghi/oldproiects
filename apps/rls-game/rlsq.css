@@ -1,0 +1,132 @@
+body{
+    width: 1000px;
+    margin: auto;
+    color: white;
+}
+
+
+/* meniu dreapta, meniu stanga si cele 2 impreuna */
+.menu2{
+    1width: 800px;
+    flex:75%;
+    box-sizing: border-box;
+}
+
+.menu1{
+    1width: 200px;
+    box-sizing: border-box;
+    flex:20%;
+
+}
+
+.menu{
+    flex-wrap: wrap;
+}
+
+.margin-anulare{
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+
+/* Chenar Munci*/
+.bmunci{
+	border: 2px solid black;
+	border-radius: 10%;
+	padding: 10px;
+	margin: 3px;
+	color: white;
+	text-shadow: 1px 1px black;
+  	transition: all 1.1s ease-out;
+  	box-shadow: 2px 2px 0px 0px black;
+  	display: inline-block;
+
+}
+
+.bmunci:hover{
+	background-color: coral;
+}
+
+/*butoanele de munca, cupara, etc...*/
+.work{
+	box-shadow: 3px 3px 0px 0px black;
+	font-weight: bold;
+}
+
+/* Umbra*/
+.umbra{
+	box-shadow: 3px 3px 0px 0px black;
+	font-weight: bold;
+}
+
+.d1 {
+	color: black;
+	text-shadow: 1px 1px gray;
+	
+}
+
+/*Chenar Cunoastere*/
+.binvata{
+	border: 2px solid black;
+	padding: 4px;
+	margin: 3px;
+	color: white;
+	text-shadow: 1px 1px black;
+	border-radius: 20px;
+  	box-shadow: 2px 2px 0px 0px black;
+  	transition: all 1.5s ease-out;
+  	transform: rotate(3deg);
+  	display: inline-block;
+ }
+
+ .binvata:hover{
+	background-color: black;
+}
+
+/*Chenar Mancare si Bautura*/
+.food{
+	border: 2px solid black;
+	margin: 3px;
+	border-radius: 20px;
+	display: inline-block;
+	box-shadow: 2px 2px 0px 0px black;
+
+}
+
+
+/* bara de informatii desrep munca, etc..*/
+.topinfo{
+	border-radius: 10px;
+	opacity: 0.5;
+	margin-top:2px;
+}
+
+#topinfounu{
+	display: none;
+}
+
+
+img{
+	border-radius:5px;
+}
+
+
+
+/* Mesaje error/restricti ex: nu mai ai energie pt a munci */
+.alerta{
+	display: none;
+	width: 100%;
+	margin: auto;
+
+}
+
+/* Bostrap purple :p */
+.badge-purple, .bg-purple{
+	background:purple;
+}
+
+
+.display-5{
+	text-shadow: 3px 3px gray, 6px 6px black;
+	font-weight: bold;
+}

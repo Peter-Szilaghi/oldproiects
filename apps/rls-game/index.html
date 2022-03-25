@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!-- Imagini de pe https://pixabay.com/ro/-->
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="icon" href="imagini/favicon.ico" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="rlsq.css">
+    <script src="rlsq.js"></script>
+    <title>Real Life Simulator</title>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="jumbotron mb-3 pt-5 pb-5 bg-dark umbra rounded"> 
+        <h1 class="text-center display-5 text-white  rounded" style="font-family: 'Lobster', cursive;">Real Life Simulator (RLS)</h1>
+        <h5 class="text-center"><span class="badge badge-danger umbra rounded">Bani: <span id="bani" class="badge badge-success">3000</span> $</span></h5> 
+    </div>
+    <!-- Bara Meniul Principal (paginile)-->
+    <div class="container-fluid text-center">
+        <ul class="nav justify-content-center nav-pills nav-justified bg-dark rounded mb-3">
+                    <!-- justify-content-end, flex-column ->vertical, nav-pils, nav-tabs, justify-content-center nav-tabs nav-justified -->
+            <li class="nav-item umbra rounded">
+                <a class="nav-link m-1 badge-success" data-toggle="pill" href="#acasa" id="goTop">Acasa</a>
+            </li>
+            <li class="nav-item umbra rounded">
+                <a class="nav-link m-1 badge-success" data-toggle="pill" href="#munca">Munca</a>
+            </li>
+            <li class="nav-item umbra rounded">
+                <a class="nav-link m-1 badge-success" data-toggle="pill" href="#educatie">Educatie</a>
+            </li>
+            <li class="nav-item umbra rounded">
+                <a class="nav-link m-1 badge-success" data-toggle="pill" href="#supermarket">Supermarket</a>
+            </li>
+            <li class="nav-item umbra rounded">
+                <a class="nav-link m-1 badge-success" data-toggle="pill" href="#shop">Shop</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="alert alert-info fade show mt-2 text-center" id="topinfounu">
+        <div class="progress-bar bg-dark rounded" id="workbar">
+        </div>
+        <p id="workinfo"></p>
+    </div>
+
+    <div class="alert alert-danger fade show alerta justify-content-center text-center">
+        <p id="mesajafisat"> </p>
+    </div>
+
+    <div class="d-flex text-center menu">
+        <!-- Meniul Static -->
+        <div class="border umbra rounded m-2 p-3 menu1">
+            <h3> - <span id="userid" class="badge badge-dark"> UserName </span> - </h3>      
+            <h5><span class="badge badge-dark d-block umbra">Mancare: <span id="mancare" class="badge badge-warning">100</span>%
+                <div class="progress">
+                  <div id="barmancare" class="progress-bar bg-warning border border-dark rounded" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="80"></div>
+                </div> </span>
+            </h5>
+            <h5><span class="badge badge-dark d-block umbra">Bautura: <span id="bautura" class="badge badge-primary">100.00</span>%
+                <div class="progress">
+                    <div id="barbautura" class="progress-bar bg-primary border border-dark rounded" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div></span>
+            </h5>
+            <h5><span class="badge badge-dark d-block umbra">Lux: <span id="lux" class="badge badge-purple">1.00</span>%
+                <div class="progress">
+                  <div id="barlux" class="progress-bar bg-purple border border-dark rounded" role="progressbar" style="width: 1%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div></span>
+            </h5>   
+            <h5><span class="badge badge-success d-block umbra">Sanatate: <span id="sanatate" class="badge badge-light">100.00</span>%
+                <div class="progress">
+                  <div id="barsanatate" class="progress-bar bg-light border border-success rounded" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div></span>
+            </h5>
+            <h5><span class="badge badge-danger d-block umbra">Timp: <span id="timp" class="badge badge-light">24.00</span>ore
+                <div class="progress">
+                  <div id="bartimp" class="progress-bar bg-light border border-danger rounded" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div></span>
+            </h5>
+            <h5><span class="badge badge-warning d-block umbra">Experienta: <span id="experienta" class="badge badge-danger">1.00</span> 
+                <div class="progress">
+                  <div id="barexperienta" class="progress-bar bg-danger border border-warning rounded" role="progressbar" style="width: 1%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div></span>
+            </h5>
+            <h5><span class="badge badge-warning d-block umbra">Cunoastere: <span id="cunoastere" class="badge badge-success">1</span>
+                <div class="progress">
+                  <div id="barcunoastere" class="progress-bar bg-success border border-warning rounded" role="progressbar" style="width: 1%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div></span>
+            </h5>
+            <h5><span class="badge badge-primary">Joci de: <span id="zile" class="badge badge-info">0</span>zile</span></h5>
+        </div>
+
+        <!-- Sectiunea cu meniuri -->
+        <div class="border umbra rounded m-2 menu2">
+            <div class="tab-content border">
+                    <!-- Pagina Acasa -->
+                    <div class="tab-pane m-2" id="acasa">
+                            <div class="d-flex flex-row flex-wrap">
+                                <button class="btn btn-info work" onclick="dormi()"> Dormi </button>
+                                <button class="btn btn-info d-none" onclick="refamaxim()"> Maxim all </button>
+                            </div>
+                    </div>
+
+                    <!-- Pagina Munca -->
+                    <div class="tab-pane m-2" id="munca">
+                                <!-- Salar, timp consumat, experienta oferita, experienta necesara, cunoasterea necesara, experienta maxima -->
+                        <div class="d-flex flex-row flex-wrap">
+                            <p class="d1">
+                                Formula de calcul pentru salar este : 70% Salar + 30% Experienta Locala
+                            </p>
+                            <div class="d-flex p-2 flex-wrap">
+                                <div class=" text-right bmunci text-center">
+                                   <h5><span class="badge badge-info">Munca 1</span></h5>
+                                   <h5><span class="badge badge-warning">Experienta: <span id="exp0" class="badge badge-danger">1.00</span></span></h5>
+                                   <h5><span class="badge badge-success">Salar: <span class="badge badge-light">1.00</span>$</span></h5>
+                                   <button class="btn btn-danger work" onclick="munca(0)"> Munceste </button>
+                                </div>  
+                                <div class=" text-right bmunci text-center">
+                                   <h5><span class="badge badge-info">Munca 2</span></h5>
+                                   <h5><span class="badge badge-warning">Experienta: <span id="exp1" class="badge badge-danger">1.00</span></span></h5>
+                                   <h5><span class="badge badge-success">Salar: <span class="badge badge-light">2.00</span>$</span></h5>
+                                   <button class="btn btn-danger work" onclick="munca(1)"> Munceste </button>
+                                </div>
+                                <div class=" text-right bmunci text-center">
+                                   <h5><span class="badge badge-info">Munca 3</span></h5>
+                                   <h5><span class="badge badge-warning">Experienta: <span id="exp2" class="badge badge-danger">1.00</span></span></h5>
+                                   <h5><span class="badge badge-success">Salar: <span class="badge badge-light">4.00</span>$</span></h5>
+                                   <button class="btn btn-danger work" onclick="munca(2)"> Munceste </button>
+                                </div> 
+                                <div class=" text-right bmunci text-center">
+                                   <h5><span class="badge badge-info">Munca 4</span></h5>
+                                   <h5><span class="badge badge-warning">Experienta: <span id="exp3" class="badge badge-danger">1.00</span></span></h5>
+                                   <h5><span class="badge badge-success">Salar: <span class="badge badge-light">7.00</span>$</span></h5>
+                                   <button class="btn btn-danger work" onclick="munca(3)"> Munceste </button>
+                                </div> 
+                                <div class=" text-right bmunci text-center">
+                                   <h5><span class="badge badge-info">Munca 5</span></h5>
+                                   <h5><span class="badge badge-warning">Experienta: <span id="exp4" class="badge badge-danger">1.00</span></span></h5>
+                                   <h5><span class="badge badge-success">Salar: <span class="badge badge-light">11.00</span>$</span></h5>
+                                   <button class="btn btn-danger work" onclick="munca(4)"> Munceste </button>
+                                </div> 
+                                <div class=" text-right bmunci text-center">
+                                   <h5><span class="badge badge-info">Munca 6</span></h5>
+                                   <h5><span class="badge badge-warning">Experienta: <span id="exp5" class="badge badge-danger">1.00</span></span></h5>
+                                   <h5><span class="badge badge-success">Salar: <span class="badge badge-light">16.00</span>$</span></h5>
+                                   <button class="btn btn-danger work" onclick="munca(5)"> Munceste </button>
+                                </div> 
+                                <div class=" text-right bmunci text-center">
+                                   <h5><span class="badge badge-info">Munca 7</span></h5>
+                                   <h5><span class="badge badge-warning">Experienta: <span id="exp6" class="badge badge-danger">1.00</span></span></h5>
+                                   <h5><span class="badge badge-success">Salar: <span class="badge badge-light">22.00</span>$</span></h5>
+                                   <button class="btn btn-danger work" onclick="munca(6)"> Munceste </button>
+                                </div> 
+                                <div class=" text-right bmunci text-center">
+                                   <h5><span class="badge badge-info">Munca 8</span></h5>
+                                   <h5><span class="badge badge-warning">Experienta: <span id="exp7" class="badge badge-danger">1.00</span></span></h5>
+                                   <h5><span class="badge badge-success">Salar: <span class="badge badge-light">30.00</span>$</span></h5>
+                                   <button class="btn btn-danger work" onclick="munca(7)"> Munceste </button>
+                                </div>
+                                <div class=" text-right bmunci text-center">
+                                   <h5><span class="badge badge-info">Munca 9</span></h5>
+                                   <h5><span class="badge badge-warning">Experienta: <span id="exp8" class="badge badge-danger">1.00</span></span></h5>
+                                   <h5><span class="badge badge-success">Salar: <span class="badge badge-light">38.00</span>$</span></h5>
+                                   <button class="btn btn-danger work" onclick="munca(8)"> Munceste </button>
+                                </div> 
+                                <div class=" text-right bmunci text-center">
+                                   <h5><span class="badge badge-info">Munca 10</span></h5>
+                                   <h5><span class="badge badge-warning">Experienta: <span id="exp9" class="badge badge-danger">1.00</span></span></h5>
+                                   <h5><span class="badge badge-success">Salar: <span class="badge badge-light">50.00</span>$</span></h5>
+                                   <button class="btn btn-danger work" onclick="munca(9)"> Munceste </button>
+                                </div> 
+                            </div>
+
+                        
+                        </div>
+                    </div>
+
+                    <!-- Pagina Educatie -->
+                    <div class="tab-pane m-2" id="educatie">
+                        <div class="d-flex flex-row flex-wrap">
+                            <!--know0-cartea, tknow0-timp necesar pt a invata, pknow0-puncte cunoastere, bknow0- cumpara, rknow0-invata -->
+                            <div class="p-2 binvata" id="know0">
+                                <h6><span class="badge badge-info">Tip : carte</span></h6>
+                                <h6><span class="badge badge-danger">Timp lectura: <span id="tknow0" class="badge badge-light">4 </span> ore</span></h6>
+                                <h6><span class="badge badge-warning">Cunoastere: <span id="pknow0" class="badge badge-success">3</span> puncte</span></h6>
+                                <h6><span class="badge badge-success">Valabilitate Free</span></h6>
+                                <h6><span class="badge badge-danger">Pret 100$</span></h6>
+                                <!-- buyknow(1), 1 e de la bknow0-->
+                                <button id="bknow0" class="btn btn-warning umbra" onclick="buyknow(0)">Cumpara</button>
+                                <!--indicator, timp, cunoastere (timpul si cunoasterea de aici nu sunt reale, trebuie modificate in functie de ce se afla in variabila JS, aici este doar pt a afla valoarea cunoasterii pe ora) -->
+                                <button id="rknow0" class="btn btn-success work" style="display: none;" onclick="readknow(0,4,3)">Invata</button>
+                            </div>
+                            <div class="p-2 binvata" id="know1">
+                                <h6><span class="badge badge-info">Tip : carte</span></h6>
+                                <h6><span class="badge badge-danger">Timp lectura: <span id="tknow1" class="badge badge-light">4 </span> ore</span></h6>
+                                <h6><span class="badge badge-warning">Cunoastere: <span id="pknow1" class="badge badge-success">3</span> puncte</span></h6>
+                                <h6><span class="badge badge-success">Valabilitate Free</span></h6>
+                                <h6><span class="badge badge-danger">Pret 100$</span></h6>
+                                <button id="bknow1" class="btn btn-warning umbra" onclick="buyknow(1)">Cumpara</button>
+                                <button id="rknow1" class="btn btn-success work" style="display: none;" onclick="readknow(1,4,3)">Invata</button>
+                            </div>
+                            <div class="p-2 binvata" id="know2">
+                                <h6><span class="badge badge-info">Tip : carte</span></h6>
+                                <h6><span class="badge badge-danger">Timp lectura: <span id="tknow2" class="badge badge-light">4 </span> ore</span></h6>
+                                <h6><span class="badge badge-warning">Cunoastere: <span id="pknow2" class="badge badge-success">3</span> puncte</span></h6>
+                                <h6><span class="badge badge-success">Valabilitate Free</span></h6>
+                                <h6><span class="badge badge-danger">Pret 100$</span></h6>
+                                <button id="bknow2" class="btn btn-warning umbra" onclick="buyknow(2)">Cumpara</button>
+                                <button id="rknow2" class="btn btn-success work" style="display: none;" onclick="readknow(2,4,3)">Invata</button>
+                            </div>
+                            <div class="p-2 binvata" id="know3">
+                                <h6><span class="badge badge-info">Tip : carte</span></h6>
+                                <h6><span class="badge badge-danger">Timp lectura: <span id="tknow3" class="badge badge-light">4 </span> ore</span></h6>
+                                <h6><span class="badge badge-warning">Cunoastere: <span id="pknow3" class="badge badge-success">3</span> puncte</span></h6>
+                                <h6><span class="badge badge-success">Valabilitate Free</span></h6>
+                                <h6><span class="badge badge-danger">Pret 100$</span></h6>
+                                <button id="bknow3" class="btn btn-warning umbra" onclick="buyknow(3)">Cumpara</button>
+                                <button id="rknow3" class="btn btn-success work" style="display: none;" onclick="readknow(3,4,3)">Invata</button>
+                            </div>
+                            <div class="p-2 binvata" id="know4">
+                                <h6><span class="badge badge-info">Tip : curs</span></h6>
+                                <h6><span class="badge badge-danger">Timp lectura: <span id="tknow4" class="badge badge-light">4 </span> ore</span></h6>
+                                <h6><span class="badge badge-warning">Cunoastere: <span id="pknow4" class="badge badge-success">3</span> puncte</span></h6>
+                                <h6><span class="badge badge-success">Valabilitate Free</span></h6>
+                                <h6><span class="badge badge-danger">Pret 500$</span></h6>
+                                <button id="bknow4" class="btn btn-warning umbra" onclick="buyknow(4)">Cumpara</button>
+                                <button id="rknow4" class="btn btn-success work" style="display: none;" onclick="readknow(4,4,3)">Invata</button>
+                            </div>
+                            <div class="p-2 binvata" id="know5">
+                                <h6><span class="badge badge-info">Tip : curs</span></h6>
+                                <h6><span class="badge badge-danger">Timp lectura: <span id="tknow5" class="badge badge-light">4 </span> ore</span></h6>
+                                <h6><span class="badge badge-warning">Cunoastere: <span id="pknow5" class="badge badge-success">3</span> puncte</span></h6>
+                                <h6><span class="badge badge-success">Valabilitate Free</span></h6>
+                                <h6><span class="badge badge-danger">Pret 500$</span></h6>
+                                <button id="bknow5" class="btn btn-warning umbra" onclick="buyknow(5)">Cumpara</button>
+                                <button id="rknow5" class="btn btn-success work" style="display: none;" onclick="readknow(5,4,3)">Invata</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagina supermarket -->
+                    <div class="tab-pane m-2" id="supermarket">
+                        <div class="d-flex flex-row flex-wrap">
+
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Apa plata</span></h5>
+                                <div>
+                                    <img src="imagini/apaplata.jpg" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Mancare: <span class="badge badge-warning">0 </span> %</span><br>
+                                        <span class="badge badge-dark">Bautura: <span class="badge badge-primary">30</span> %</span><br>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">0</span> %</span><br>
+                                        <span class="badge badge-info">Consum imediat</span><br>
+                                        <span class="badge badge-warning">Max: <span id="idmax0" class="badge badge-danger">Nelimitat</span>/zi</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" onclick="buyfood(0)"><span class="badge badge-danger">0.5$</span>Cumpara</button>
+                            </div>
+
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Sandwich</span></h5>
+                                <div>
+                                    <img src="imagini/sandwich.jpg" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Mancare: <span class="badge badge-warning">20 </span> %</span><br>
+                                        <span class="badge badge-dark">Bautura: <span class="badge badge-primary">0</span> %</span><br>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">0</span> %</span><br>
+                                        <span class="badge badge-info">Consum imediat</span><br>
+                                        <span class="badge badge-warning">Max: <span id="idmax1" class="badge badge-danger">Nelimitat</span>/zi</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" onclick="buyfood(1)"><span class="badge badge-danger">1$</span>Cumpara</button>
+                            </div>
+
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Supa</span></h5>
+                                <div>
+                                    <img src="imagini/supa.jpg" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Mancare: <span class="badge badge-warning">15 </span> %</span><br>
+                                        <span class="badge badge-dark">Bautura: <span class="badge badge-primary">40</span> %</span><br>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">1</span> %</span><br>
+                                        <span class="badge badge-info">Consum imediat</span><br>
+                                        <span class="badge badge-warning">Max: <span id="idmax2" class="badge badge-danger">1</span>/zi</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" onclick="buyfood(2)"><span class="badge badge-danger">2$</span>Cumpara</button>
+                            </div>
+
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Felul 2</span></h5>
+                                <div>
+                                    <img src="imagini/felul2.jpg" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Mancare: <span class="badge badge-warning">40 </span> %</span><br>
+                                        <span class="badge badge-dark">Bautura: <span class="badge badge-primary">0</span> %</span><br>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">1</span> %</span><br>
+                                        <span class="badge badge-info">Consum imediat</span><br>
+                                        <span class="badge badge-warning">Max: <span id="idmax3" class="badge badge-danger">1</span>/zi</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" onclick="buyfood(3)"><span class="badge badge-danger">5$</span>Cumpara</button>
+                            </div>
+
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Desert</span></h5>
+                                <div>
+                                    <img src="imagini/desert.jpg" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Mancare: <span class="badge badge-warning">5 </span> %</span><br>
+                                        <span class="badge badge-dark">Bautura: <span class="badge badge-primary">0</span> %</span><br>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">3</span> %</span><br>
+                                        <span class="badge badge-info">Consum imediat</span><br>
+                                        <span class="badge badge-warning">Max: <span id="idmax4" class="badge badge-danger">1</span>/zi</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" onclick="buyfood(4)"><span class="badge badge-danger">9$</span>Cumpara</button>
+                            </div>
+
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Cocktail</span></h5>
+                                <div>
+                                    <img src="imagini/cocktail.jpg" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Mancare: <span class="badge badge-warning">0 </span> %</span><br>
+                                        <span class="badge badge-dark">Bautura: <span class="badge badge-primary">10</span> %</span><br>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">3</span> %</span><br>
+                                        <span class="badge badge-info">Consum imediat</span><br>
+                                        <span class="badge badge-warning">Max: <span id="idmax5" class="badge badge-danger">1</span>/zi</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" onclick="buyfood(5)"><span class="badge badge-danger">9$</span>Cumpara</button>
+                            </div>
+
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">All in</span></h5>
+                                <div>
+                                    <img src="imagini/masalux.jpg" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Mancare: <span class="badge badge-warning">30 </span> %</span><br>
+                                        <span class="badge badge-dark">Bautura: <span class="badge badge-primary">30</span> %</span><br>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">7</span> %</span><br>
+                                        <span class="badge badge-info">Consum imediat</span><br>
+                                        <span class="badge badge-warning">Max: <span id="idmax6" class="badge badge-danger">1</span>/zi</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" onclick="buyfood(6)"><span class="badge badge-danger">25$</span>Cumpara</button>
+                            </div>
+
+                        </div>
+                    </div>
+                        
+                    <!-- Pagina Shop -->
+                    <div class="tab-pane m-2" id="shop">
+                        <div class="d-flex flex-row flex-wrap">
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Telefon</span></h5>
+                                <div>
+                                    <img src="imagini/telefon.png" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">5</span> %</span><br>
+                                        <span class="badge badge-info">Durabilitate: <span id="itm0" class="badge badge-danger">2</span> zile</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" id="bitm0" onclick="buyshop(0)"><span class="badge badge-danger">1$</span>Cumpara</button>
+                            </div>
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Bicicleta</span></h5>
+                                <div>
+                                    <img src="imagini/bicicleta.png" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">5</span> %</span><br>
+                                        <span class="badge badge-info">Durabilitate: <span id="itm1" class="badge badge-danger">5</span> zile</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" id="bitm1" onclick="buyshop(1)"><span class="badge badge-danger">1$</span>Cumpara</button>
+                            </div>
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Laptop</span></h5>
+                                <div>
+                                    <img src="imagini/laptop.jpg" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">10</span> %</span><br>
+                                        <span class="badge badge-info">Durabilitate: <span id="itm2" class="badge badge-danger">10</span> zile</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" id="bitm2" onclick="buyshop(2)"><span class="badge badge-danger">1$</span>Cumpara</button>
+                            </div>
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Ceas</span></h5>
+                                <div>
+                                    <img src="imagini/ceas.jpg" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">15</span> %</span><br>
+                                        <span class="badge badge-info">Durabilitate: <span id="itm3" class="badge badge-danger">10</span> zile</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" id="bitm3" onclick="buyshop(3)"><span class="badge badge-danger">1$</span>Cumpara</button>
+                            </div>
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Masina</span></h5>
+                                <div>
+                                    <img src="imagini/masina.png" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">20</span> %</span><br>
+                                        <span class="badge badge-info">Durabilitate: <span id="itm4" class="badge badge-danger">10</span> zile</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" id="bitm4" onclick="buyshop(4)"><span class="badge badge-danger">1$</span>Cumpara</button>
+                            </div>
+                            <div class="food p-2">
+                                <h5><span class="badge badge-info">Palat</span></h5>
+                                <div>
+                                    <img src="imagini/palat.jpg" width="auto" height="80px">
+                                    <h6>
+                                        <span class="badge badge-dark">Lux: <span class="badge badge-purple">29</span> %</span><br>
+                                        <span class="badge badge-info">Durabilitate: <span id="itm5" class="badge badge-danger">15</span> zile</span>
+                                    </h6>
+                                </div>
+                                <button class="btn btn-warning umbra" id="bitm5" onclick="buyshop(5)"><span class="badge badge-danger">1$</span>Cumpara</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <footer class="page-footer font-small blue text-center bg-dark mt-3 umbra rounded">
+    <div class="footer-copyright text-center py-3 text-white">
+        <p>Copyright © 2021 All rights reserved</p>
+        <a href="#"> Termeni si Conditii</a>
+    </div>
+    </footer>
+
+
+</body>
+</html>

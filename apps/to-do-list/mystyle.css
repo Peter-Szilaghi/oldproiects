@@ -1,0 +1,65 @@
+h1{
+    margin: 24px auto;
+    text-align: center;
+    background: black;
+    padding: 12px;
+    color: white;
+    border-radius: 12px;
+
+
+}
+
+.input-group { margin-bottom: 8px;  box-shadow: 4px 4px black, -4px -4px black, 4px -4px red, -4px 4px red;}
+    .form-control:focus {
+        border: 1px solid black;
+        background: black;
+        color: white;
+        border-radius: 0px;
+    }
+    .input-group-text{
+        background: black;
+        color: white;
+        border: 0px;
+        border-radius: 0px;
+        font-weight: bold;
+    }
+    .input-group-text:hover { transform: scale(1.1,1.1); color:blue}
+
+ul { padding-left: 0; }
+li{ 
+    list-style-type: none; 
+    padding: 8px 0 8px 8px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+li:hover{
+    background-color: black;
+    color:white;
+}
+
+.task{ font-weight: bold; }
+.task:focus { background: white; color: black; }
+    .actions{
+        display: inline-block;
+        margin-right: 4px;
+        border-radius: 5px;
+    }
+
+        .done-task { color:lightgreen; }
+        .edit-task { color: blue}
+        .delete-task { color: red;}
+
+        .material-icons{ padding: 4px; }
+        .material-icons:hover { background-color:white; border-radius: 8px;}
+
+#delete-tasks{
+    display: block;
+    background: black;
+    color: white;
+    text-align: center;
+    margin: auto;
+    border: 0px;
+    box-shadow: 4px 4px black, -4px -4px black, 4px -4px red, -4px 4px red;
+}
+#delete-tasks:hover { transform: scale(1.1,1.1); color:red}

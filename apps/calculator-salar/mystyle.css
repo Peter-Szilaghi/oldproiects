@@ -1,0 +1,76 @@
+h1{
+    text-align: center;
+    background: black;
+    padding: 12px;
+    color: white;
+    border-radius: 12px;
+}
+
+body{
+    background: lightgray;
+}
+
+.net-brut{
+    background: lightgray;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.intro-date{
+    background: gray;
+    color: white;
+    margin: 28px auto;
+    text-align: center;
+    padding: 8px 32px;
+    border-radius: 12px;
+    box-shadow: 4px 4px black, -4px -4px black, 4px -4px red, -4px 4px red;
+}
+    .intro-date h4, .intro-date h5 { margin: 8px auto;}
+    .intro-date label { font-weight: bold; }
+    .intro-date input, .intro-date input:active {
+        background: white;
+        border-radius: 4px;
+    }
+    .intro-date button{
+        padding: 12px;
+        margin: 8px auto;
+        background: black;
+        color: white;
+    }
+
+
+table{
+    width: calc(100% - 16px);
+    margin: 24px 8px;
+    border-collapse: collapse;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 4px -4px black, -4px 4px black, 4px 4px red, -4px -4px red;
+    background: gray;
+    color: white;
+    font-weight: bold;
+}
+    thead, tfoot{ background: black; box-sizing: border-box;}
+
+    tr{ border: 2px solid white; padding: 18px; }
+    tr:nth-child(even) {background-color: darkgray;}
+
+    td,th { padding: 12px; }
+
+    .one-col{ width: 65%; }
+    .two-col{ width: 15%; }
+    .three-col{ width: 20%; }
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
