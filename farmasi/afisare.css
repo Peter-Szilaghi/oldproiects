@@ -1,0 +1,47 @@
+	img {
+		border-radius: 5px;
+	}
+	h5 {
+		font-weight: bold;
+	}
+	ion-icon {
+ 		color: #d20962;
+ 		font-size:28px;
+	}
+	a{
+		color:white;
+	}
+	
+	div.social-float-parent { position: relative; }
+	div#social-float { width:100%; position: fixed; bottom: 0px;}
+
+	.bordercolor{
+		border: 2px solid #d20962;
+		border-radius: 5px;
+	}
+
+	#inscriere {
+  			display: none;
+  		}
+  		
+  	.ascuns {
+  		display: none;
+  	}	
+  		
+  	.ascuns2 {
+  		display: none;
+  	}	
+  		
+	.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    	color: white;
+    	background-color: #d20962;
+	}
+
+    .superstil{
+		color: white;
+		background-color: #d20962;
+		text-shadow:2px 2px black;
+		font-style: italic;
+		border-radius:5px;
+	}
+

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+
+
+    <link rel="icon" href="Imagini/favicon.png" type="image/gif" sizes="16x16">
+    <script src="join.js"></script>
+	<link rel="stylesheet" href="afisare.css">
+
+    <title>Farmasi</title>
+  	
+
+
+    
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1673801039539477');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1673801039539477&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+    
+    
+</head>
+<body>
+
+	<div class="container-fluid promotie sticky-top" style="background: #">
+		<div class="row p-2 mb-0 justify-content-center border border-dark font-italic" style="text-align:center; background: #7d3f98">
+			<div class="col-md-12">
+				<a href="#inscriere2">
+					<button class="btn border-white p-1 center shadow" style="color:white; background: #d20962; text-shadow:2px 2px black;text-align:center;">
+						<h5 style="color:white"><i>Doresc sa ma inscriu</i></h5>
+					</button>
+				</a>
+			</div>
+		</div>
+	</div> 
+
+    <div class="container-fluid mt-3 font-weight-bold">
+		<div class="row p-2 justify-content-center" style="text-align:center; background: orange; color:black;">
+			Pe aceasta pagina sunt prezentate doar cateva din cele peste 2000 de produse <br> Pentru lista completa foloseste formularul de inscriere
+		</div>
+	</div>
+    
+    
+    <div class="container transport mt-4" style="background: #">
+		<div class="row justify-content-center">
+			<div class="col-md-6 text-center bordercolor">
+				<h5 class="mt-3 rounded" style="color:white; background: #d20962; text-shadow:2px 2px black"><i>Bucura-te de toate beneficiile</i></h6>
+				<h6>Produse naturale de calitate</h6>
+				<h6> Produse la preturi mereu accesibile</h6> 
+				<h6> Reducere 23% la produsele Farmasi fata de pretul catalogului</h6>
+				<h6> Reducere 30% la produsele Dr. C. Tuna si Mr. Wipes fata de pretul catalogului</h6>
+				<h6> Posibilitatea crearii unui venit financiar</h6>
+			</div>
+			<div class="col-md-6 text-center bordercolor">
+				<h5 class="mt-3 font-italic rounded" style="color:white; background: #d20962; text-shadow:2px 2px black">Transport GRATUIT la comenzi mai mari de 199 lei*</h5>
+				<h6>*(pret factura,pret redus al produselor)</h6>
+				<h6>La comenzi mai mici de 199 lei transportul este 12,99 lei</h6><br>
+				<h6><b>Livrarea coletelor</b> se face prin curierat rapid GSL cu termenul de livrare de <b>2-5 zile lucratoare</b> din momentul plasarii comenzii</h6>
+				<h5>Metoda de plata</h5>
+				<h6>Online cu cardul</h6> 
+				<h6><b>Ramburs</b> in momentul in care primesti coletul la tine acasa</h6>
+ 			</div>
+		</div>
+  	</div>
+
+  	<div class="container mt-3" id="seturisiproduse" style="background: #">
+		<div class="row p-2 justify-content-center font-italic rounded" onclick="detaliiproduse()" style="color:white; background: #d20962; text-shadow:2px 2px black">
+			<h5><b>Detalii despre seturi de produse</b></h5>
+		</div>
+	</div>
+	
+	<div class="container">
+		<ul class="nav justify-content-center nav-pills nav-justified rounded font-italic font-weight-bold" style="background:#7d3f98; border:3px solid black">
+					<!-- justify-content-end, flex-column ->vertical, nav-pils, nav-tabs, justify-content-center nav-tabs nav-justified -->
+			<li class="nav-item border">
+				<a class="nav-link" data-toggle="pill" href="#kitstart">
+					Kitul Start
+				</a>
+			</li>
+			<li class="nav-item border">
+		    	<a class="nav-link" data-toggle="pill" href="#setusturoi">Set Usturoi</a>
+			</li>
+			<li class="nav-item border">
+		    	<a class="nav-link" data-toggle="pill" href="#setkeratina">Set Keratina</a>
+			</li>
+			<li class="nav-item border">
+		    	<a class="nav-link" data-toggle="pill" href="#biohome">Set Bio Home</a>
+			</li>
+		</ul>
+	</div>
+	<div>
+		<div class="tab-content border text-center" id="kitstarth">
+			<div class="tab-pane container active" id="kitstart"><br>
+				<h5 class="p-2" style="color:white; background: #7d3f98; text-shadow:2px 2px black"> <b>Kitul de start - se poate comanda 1 singura data si doar in prima comanda de la inregistrare</b></h5>
+				<div class="row">
+					<div class="col-sm-6 font-weight-bold">
+						<div class=" mb-2">
+						<p style="color:white; background: #d20962; text-shadow:2px 2px black"><b> Kitul de start contine </b></p>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Pastă de dinți cu efect de albire<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Ruj mat matte merlot<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Gel masaj cu efect dublu<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Șampon revitalizat pe bază de usturoi<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Mască cu cărbune activ<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Cremă de față cu extract din arbore de ceai<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Cremă de mâini cu gălbenele<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>6 mostre de parfum<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>3 ghiduri<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>+ 1 cutie superbă cu închidere magnetică<br>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<img src="seturi/kitstart.jpg" width="90%">
+					</div>
+				</div>
+				<p>!Unele produse pot fi inlocuite cu altele similare de aceeasi valoare in functie de disponibilitatea stocului</p><br>
+				<a href="#seturisiproduse">
+					<button class="m-3 rounded font-weight-bold" style="color:white; background:#7d3f98">
+						<ion-icon name="arrow-up-circle-sharp"></ion-icon>
+						Vezi alte seturi
+						<ion-icon name="arrow-up-circle-sharp"></ion-icon>
+					</button>
+				</a>
+			</div>
+
+			<div class="tab-pane container" id="setusturoi"><br>
+				<h5 class="p-2" style="color:white; background: #7d3f98; text-shadow:2px 2px black"> <b>Gama cu usturoi și capyxil pentru un păr lung, frumos și sănătos! <br> Nu misoare a usturoi!</b></h5>
+				<div class="row">
+					<div class="col-sm-6 font-weight-bold">
+						<div class=" mb-2">
+						<p style="color:white; background: #d20962; text-shadow:2px 2px black"><b> Setul de usturoi contine </b></p>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Sampon cu usturoi 500ML<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Masca de par cu usturoi 200ML<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Ulei concentrat de usturoi și capyxil 50ML<br>
+						</div>
+						<div class=" mb-2">
+						<p style="color:white; background: #d20962; text-shadow:2px 2px black"><b> Beneficiile utilizarii </b></p>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Opreste caderea parului<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Regenereaza parul deteriorat<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Intareste firul de par<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Hraneste firul de par la radacina<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Accelereaza cresterea parului<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Curata scalpul<br>
+						</div>
+						<div class="container-fluid mt-5 mt-3 rounded font-weight-bold text-center" style="text-align:center; background: orange; color:white; text-shadow:2px 2px black; border:2px solid red;">
+							<del> Pret catalog 91 lei </del> 
+							<h5>Pret inscriere  63.70 lei</h5>
+							Castigi 27.30 lei
+						</div>
+					</div>
+					<div class="col-sm-6 mt-3">
+						<img src="seturi/setusturoi.png" width="90%">
+					</div>
+				</div>
+				<p class="mt-3" style="color:white; background: #d20962; text-shadow:2px 2px black"><b> Mod de utilizare </b></p>
+				<p> Inainte de a-ti spala parul aplica <b>uleiul concentrat de usturoi</b> pe toata lungimea parului incepand cu varfurile<br>
+					Maseaza prin miscari circulare timp de aproximativ 1 minut si asteapta 30 de minute dupa care spala cu <b>Samponul de usturoi</b><br> 
+					Dupa samponare aplica <b>Masca de par cu usturoi</b> pe varfurile umede , lasa 2-3 minute sa actioneze apoi clateste<br>
+					<b>Se recomanda o aplicare de 2 ori pe saptamana cu uleiul concentrat de usturoi</b><br><br>
+				<a href="#seturisiproduse">
+					<button class="m-3 rounded font-weight-bold" style="color:white; background:#7d3f98">
+						<ion-icon name="arrow-up-circle-sharp"></ion-icon>
+						Vezi alte seturi
+						<ion-icon name="arrow-up-circle-sharp"></ion-icon>
+					</button>
+				</a>
+			</div>
+
+			<div class="tab-pane container" id="setkeratina"><br>
+				<h5 class="p-2" style="color:white; background: #fb8a2e; text-shadow:2px 2px black"> <b>Tratament cu gama de prduse cu Karatina</b></h5>
+				<div class="row">
+					<div class="col-sm-6 font-weight-bold">
+						<div class=" mb-2">
+						<p style="color:white; background: #fb8a2e; text-shadow:2px 2px black"><b> Setul Keratina contine </b></p>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Sampon  cu keratina 400ML<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Masca de par cu keratina 200ML<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Spray pentru par cu keratina 115ML<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Ser cu keratina 50ML<br>
+						</div>
+						<div class=" mb-2">
+						<p style="color:white; background: #fb8a2e; text-shadow:2px 2px black"><b> Beneficiile utilizarii </b></p>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Curata in profunzime parul si indeparteaza rezidurile<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Patrunde in stratul cuticulei si hraneste firul de par in profunzime<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Restabileste nivelul esential de hidratare <br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Imbunatateste rezistenta parului<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Protejeaza parul impotriva caldurii si instrumentelor de coafat<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Ofera parului un luciu instantaneu si un aspect matasos<br>
+						</div>
+						<div class="container-fluid mt-5 mt-3 rounded font-weight-bold text-center" style="text-align:center; background: orange; color:white; text-shadow:2px 2px black; border:2px solid red;">
+							<del> Pret catalog 89.96 lei </del> 
+							<h5>Pret inscriere 69.26 ei</h5>
+							Castigi 20.7 lei
+						</div>
+					</div>
+					<div class="col-sm-6 mt-3">
+						<img src="seturi/setkeratina.png" width="90%">
+					</div>
+				</div>
+				<p class="mt-3" style="color:white; background: #fb8a2e; text-shadow:2px 2px black"><b> Mod de utilizare </b></p>
+				<p> 1. Masează pe păr <b>Samponul cu keratina</b> până obții o spumă bogată. Se clătește cu apă din abundență. Pentru un efect de netezire de durată, aplică Masca de tratament cu keratină pentru păr.<br>
+					2. Masează <b>Masca de tratament cu keratină</b> pe părul umed după șamponare. Întinde cu ajutorul degetelor pe lungimea părului, insistând pe vârfuri. Pentru rezultate optime, lasă produsul să acționeze 3-5 minute și clătește cu apă din abundență. Aplica apoi Spray-ul de reparare cu keratină ce asigură pieptănarea ușoară și intensifică luciul.<br>
+					3. Agită bine <b>Spray-ul de reparare cu keratină</b> înainte de utilizare. Pulverizează pe părul umed și masează delicat cu degetele. Nu necesită clătire. Pentru un aspect mătăsos și lucios și pentru tratamentul vârfurilor despicate, aplică Serul de tratament cu keratină pentru păr.<br>
+					4. Aplică câteva picături cu <b>Serul de keratina</b> pe părul uscat, insistând pe vârfuri. Nu necesită clătire.<br><br>
+				<a href="#seturisiproduse">
+					<button class="m-3 rounded font-weight-bold" style="color:white; background:#7d3f98">
+						<ion-icon name="arrow-up-circle-sharp"></ion-icon>
+						Vezi alte seturi
+						<ion-icon name="arrow-up-circle-sharp"></ion-icon>
+					</button>
+				</a>
+			</div>
+
+			<div class="tab-pane container" id="biohome"><br>
+				<h5 class="p-2" style="color:white; background: #7ac143; text-shadow:2px 2px black"> <b>Setul Mr Wipes Bio Home<br>
+				Toate produsele sunt concentrate si apara mediul</b></h5>
+				<div class="row">
+					<div class="col-sm-6 font-weight-bold">
+						<div class=" mb-2">
+						<p style="color:white; background: #7ac143; text-shadow:2px 2px black"><b> Setul Bio Home contine </b></p>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Detergent lichid concentrat pentru rufe colorate 1000ML<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Detergent lichid concentrat pentru rufe albe 1000ML<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Solutie concentrata pentru indepartarea grasimii si murdariei 500ML<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Detergent lichid pentru vase 300ML<br>
+						<ion-icon name="checkmark-circle-sharp"></ion-icon>Spray pentru curatarea ecranelor 115ML<br>
+						</div>
+						<div class="container-fluid mt-5 mt-3 rounded font-weight-bold text-center" style="text-align:center; background: orange; color:white; text-shadow:2px 2px black; border:2px solid red;">
+							<del> Pret catalog 100 lei </del> 
+							<h5>Pret inscriere 70 lei</h5>
+							Castigi 30 lei
+						</div>
+					</div>
+					<div class="col-sm-6 mt-3">
+						<img src="seturi/biohome.png" width="90%">
+					</div>
+				</div>
+				<p class="mt-3" style="color:white; background: #7ac143; text-shadow:2px 2px black"><b> Avantajele si beneficiile utilizarii produselor Mr Wipes Bio Home </b></p>
+				<img src="mrwipes/122-137.jpg" width="90%"><br>
+				<a href="#seturisiproduse">
+					<button class="m-3 rounded font-weight-bold" style="color:white; background:#7d3f98">
+						<ion-icon name="arrow-up-circle-sharp"></ion-icon>
+						Vezi alte seturi
+						<ion-icon name="arrow-up-circle-sharp"></ion-icon>
+					</button>
+				</a>
+			</div>
+		</div>
+	</div>
+  	
+	<div class="container mb-3" style="background: #">
+		<div class="row p-2 justify-content-center font-italic rounded" style="color:white; background: #d20962; text-shadow:2px 2px black">
+			<h5><b>Clienti multumiti</b></h5>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+			  	<img src="seturi/marturii.png" width="90%"><br>				
+			</div>
+			<div class="col-sm-6">
+			  	<img src="seturi/marturii2.png" width="90%"><br>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid" id="inscriere2" style="background: #">
+		<div class="row justify-content-center font-italic rounded" style="color:white; background: #d20962; text-shadow:2px 2px black; border:2px solid black;">
+			<h5><b>Inscriere</b></h5>
+		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQe1q2wJuV7JocKbWrZ5PawFcs0iUZX3Q2dknQuHnABO1i6w/viewform?embedded=true" width="100%" height="1543" frameborder="0" marginheight="0" marginwidth="0" id="" scrolling="no" style="background: #d20962;">Loading…</iframe>
+	    </div>
+	</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue" style="text-align:center; background: black">
+  	<!-- Copyright -->
+  	<div class="footer-copyright text-center py-3" style="text-align:center; color: white">
+  	Copyright © 2020 All rights reserved<br>
+  	Acest site apartine unui consultant independent Farmasi<br>
+
+
+    <a href="termeni-si-conditii.html"> Termeni si Conditii</a>
+  	</div>
+  	<!-- Copyright -->
+</footer>
+<!-- Footer -->
+<script type="text/javascript">
+	var inscriere = document.querySelector('#inscriere');
+	var ascuns = document.querySelector('.ascuns');
+	var ascuns2 = document.querySelector('.ascuns2');
+
+function vizibil(){
+	inscriere.style.display = "block";
+	ascuns2.style.display = "block";
+}
+
+function detaliiproduse(){
+	ascuns.style.display = "block";
+}
+
+
+
+</script>
+</body>
+</html>
